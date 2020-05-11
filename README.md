@@ -35,5 +35,9 @@ Result will be saved in `~/recon/example.com/`
 
 If you want to see the screenshots from your VPS you can use [ssslide](https://github.com/tehryanx/ssslide)
 
-
+## To-Do
+- Add gau to detect XSS, Open Redirect vulns.
+- Add S3 Scanner
+- Add Wayback URLs support
+- Add subjs
  

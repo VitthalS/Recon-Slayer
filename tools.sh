@@ -14,7 +14,7 @@ sudo apt-get install -y build-essential libssl-dev libffi-dev python-dev
 sudo apt-get install -y python-setuptools
 sudo apt-get install -y libldns-dev
 sudo apt-get install -y python3-pip
-sudo apt-get install -y python-pip
+sudo apt-get install -y python2.7 python-pip
 sudo apt-get install -y python-dnspython
 sudo apt-get install -y git
 sudo apt-get install -y rename
@@ -22,6 +22,8 @@ sudo apt-get install -y xargs
 sudo apt-get install -y phantomjs
 sudo apt-get install -y nmap
 sudo apt-get install -y curl
+sudo apt-get install -y jq
+
 
 
 #create a tools folder in ~/
@@ -83,6 +85,7 @@ pip3 install -r requirements.txt
 echo "done"
 
 echo "Installing dirsearch"
+cd ~/tools
 git clone https://github.com/maurosoria/dirsearch.git
 echo "done"
 

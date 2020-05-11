@@ -2,7 +2,7 @@
 Noobs Python script to automate your reconnaissance and get result on your slack.
 
 
-##Prerequisite 
+## Prerequisite 
 - Create a slack workspace
 - Generate slack token from : https://api.slack.com/custom-integrations/legacy-tokens
 - Generate webhook token from here : https://api.slack.com/incoming-webhooks

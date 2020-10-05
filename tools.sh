@@ -9,6 +9,7 @@ sudo apt-get install -y libcurl4-openssl-dev
 sudo apt-get install -y libssl-dev
 sudo apt-get install -y jq
 sudo apt-get install -y ruby-full
+sudo apt-get install -y libxss1 libappindicator1 libindicator7
 sudo apt-get install -y libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev
 sudo apt-get install -y build-essential libssl-dev libffi-dev python-dev
 sudo apt-get install -y python-setuptools
@@ -77,11 +78,11 @@ echo "Installing subjack"
 go get github.com/haccer/subjack
 echo "done"
 
-echo "Installing Webscreenshot"
-git clone https://github.com/maaaaz/webscreenshot.git
-cd webscreenshot
-pip install -r requirements.txt
-pip3 install -r requirements.txt
+echo "Installing gowitness"
+cd /root/tools ; wget https://github.com/sensepost/gowitness/releases/download/2.1.2/gowitness-2.1.2-linux-amd64 ; mv gowitness-2.1.2-linux-amd64 gowitness
+chmod +x gowitness
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dpkg -i google-chrome-stable_current_amd64.deb
 echo "done"
 
 echo "Installing dirsearch"
@@ -94,9 +95,38 @@ go get -u github.com/tomnomnom/httprobe
 cp ~/go/bin/httprobe /usr/bin
 echo "done"
 
+echo "Installing httpx"
+go get -u -v github.com/projectdiscovery/httpx/cmd/httpx
+cp ~/go/bin/httpx /usr/bin
+echo "done"
+
 echo "Installing Filter-Resolved"
 go get github.com/tomnomnom/hacks/filter-resolved
 cp ~/go/bin/filter-resolved /usr/bin
+echo "done"
+
+echo "Installing gau"
+go get -u -v github.com/lc/gau
+cp ~/go/bin/gau /usr/bin
+echo "done"
+
+echo "Installing wurl"
+go get -u github.com/bp0lr/wurl
+cp ~/go/bin/wurl /usr/bin
+echo "done"
+
+echo "Downloading nuclei templates"
+cd /root/tools/ ; git clone https://github.com/projectdiscovery/nuclei-templates.git
+echo "done"
+
+echo "Installing nuclei"
+go get -u -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
+cp ~/go/bin/nuclei /usr/bin
+echo "done"
+
+echo "Installing waybackurls"
+go get github.com/tomnomnom/waybackurls
+cp ~/go/bin/waybackurls /usr/bin
 echo "done"
 
 

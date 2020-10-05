@@ -19,6 +19,8 @@ Noobs Python script to automate your reconnaissance and get result on your slack
         screenshots
         nmap
         directories
+        nuclei
+        gau
 
 ## Install 
 1. git clone https://github.com/VitthalS/Recon-Slayer.git
@@ -36,8 +38,14 @@ Result will be saved in `~/recon/example.com/`
 If you want to see the screenshots from your VPS you can use [ssslide](https://github.com/tehryanx/ssslide)
 
 ## To-Do
-- Add gau to detect XSS, Open Redirect vulns.
 - Add S3 Scanner
-- Add Wayback URLs support
 - Add subjs
+
+## Update
+- Added gau support to collect urls.
+- Added nuclei support
+- Replaced httprobe with httpx
+- Added `-b` flag to dirsearch
+- Replaced webscreenshot with gowitness
+
  
